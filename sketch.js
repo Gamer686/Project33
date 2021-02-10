@@ -1,7 +1,7 @@
-var Engine = Matter.Engine,
+ var Engine = Matter.Engine,
   World = Matter.World,
-  Events = Matter.Events,
-  Bodies = Matter.Bodies;
+   Events = Matter.Events,
+   Bodies = Matter.Bodies;
  
 var particles = [];
 var plinkos = [];
@@ -95,22 +95,22 @@ function draw() {
    
      particles[j].display();
    }
-   for (var j = 0; j < divisions.length; j++) {
+   for (var j = 0; j < particles.length; j++) {
      divisions[j].display();
      if(particles[j].body.position.x<300 && particles[j].body.position.y>760){
        score=score+500;
        particles.pop();
      }
-else if(particles[j].body.position.x<600 && particles[j].body.position.x>301 && particles[j].body.postion.y>760){
+else if(particles[j].body.position.x<600 && particles[j].body.position.x>301 && particles[j].body.position.y>760){
   score = score+100;
   particles.pop();
 }
-else if(particles[j].body.position.x<900 && particles[j].body.position.x>601 && particles[j].body.postion.y>760){
+else if(particles[j].body.position.x<900 && particles[j].body.position.x>601 && particles[j].body.position.y>760){
   score = score+200;
   particles.pop();
    }
 }
-for(var k = 0; k<divisions.lenght;k++){
+for(var k = 0; k< particles.lenght;k++){
   divisions[k].display();
 }
 function mousePressed(){
