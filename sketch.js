@@ -86,10 +86,7 @@ function draw() {
      plinkos[i].display();
      
    }
-   if(frameCount%60===0){
-     particles.push(new Particle(random(width/2-30, width/2+30), 10,10));
-     score++;
-   }
+   
  
   for (var j = 0; j < particles.length; j++) {
    
@@ -110,13 +107,15 @@ else if(particles[j].body.position.x<900 && particles[j].body.position.x>601 && 
   particles.pop();
    }
 }
-for(var k = 0; k< particles.lenght;k++){
+for(var k = 0; k< particles.length;k++){
   divisions[k].display();
 }
+
+}
+
 function mousePressed(){
   if(gameState!=="end"){
     count++
     particles.push(new Particle(mouseX,10,10,10));
   }
-}
 }
