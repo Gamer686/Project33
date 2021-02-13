@@ -107,7 +107,7 @@ else if(particles[j].body.position.x<900 && particles[j].body.position.x>601 && 
   particles.pop();
    }
 }
-for(var k = 0; k< particles.length;k++){
+for(var k = 0; k< divisions.length;k++){
   divisions[k].display();
 }
 
